@@ -1,0 +1,320 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #8FBCE8 0%, #B6D4F1 45%, #EAF4FF 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* KOTAK KALKULATOR */
+.container {
+    width: 360px;
+    padding: 55px 35px 35px;
+    border-radius: 35px;
+
+    position: relative;
+    z-index: 2;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.95),
+        rgba(225,242,255,0.88)
+    );
+
+    border: 2px solid rgba(255,255,255,0.8);
+
+    box-shadow:
+        18px 22px 45px rgba(49,112,165,0.25),
+        -12px -12px 35px rgba(255,255,255,0.65),
+        inset 4px 4px 12px rgba(255,255,255,0.9),
+        inset -4px -4px 12px rgba(130,180,220,0.12);
+
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-6px);
+}
+
+/* LINGKARAN IKON */
+.container::before {
+    content: "▦";
+    position: absolute;
+
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        145deg,
+        #a8dcff,
+        #559edc
+    );
+
+    border: 4px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 8px 18px rgba(54,119,177,0.3),
+        inset 3px 3px 7px rgba(255,255,255,0.5),
+        inset -3px -3px 7px rgba(40,105,165,0.2);
+}
+
+/* JUDUL */
+h1 {
+    color: #3979ad;
+    font-size: 30px;
+    font-weight: 750;
+    margin-bottom: 8px;
+
+    text-shadow:
+        1px 2px 2px rgba(60,120,170,0.15);
+}
+
+/* SUBTITLE */
+.subtitle {
+    color: #759bbd;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUT DAN SELECT */
+input,
+select {
+    width: 100%;
+    height: 53px;
+    padding: 0 17px;
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.9);
+
+    background: linear-gradient(
+        145deg,
+        #f9fcff,
+        #e5f2ff
+    );
+
+    color: #527b9d;
+    font-size: 16px;
+
+    outline: none;
+
+    box-shadow:
+        5px 6px 12px rgba(95,145,190,0.15),
+        -4px -4px 10px rgba(255,255,255,0.9),
+        inset 1px 1px 3px rgba(255,255,255,0.9);
+
+    transition: all 0.25s ease;
+}
+
+/* FOKUS INPUT */
+input:focus,
+select:focus {
+    border: 1px solid #83c4f5;
+
+    box-shadow:
+        0 0 0 4px rgba(115,190,245,0.15),
+        4px 6px 12px rgba(80,140,190,0.15);
+}
+
+/* TOMBOL HITUNG */
+button {
+    width: 100%;
+    height: 54px;
+
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        145deg,
+        #9bd5ff,
+        #65afea 55%,
+        #4e9bdc
+    );
+
+    box-shadow:
+        0 8px 0 #478ac2,
+        0 13px 22px rgba(60,130,190,0.3),
+        inset 0 3px 5px rgba(255,255,255,0.45);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.06);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(5px);
+
+    box-shadow:
+        0 3px 0 #478ac2,
+        0 6px 12px rgba(60,130,190,0.2);
+}
+
+/* HASIL PERHITUNGAN */
+.hasil {
+    margin-top: 22px;
+    padding: 20px 15px;
+
+    border-radius: 19px;
+
+    color: #527fa6;
+    font-size: 17px;
+
+    background: linear-gradient(
+        145deg,
+        #e5f3ff,
+        #cde6ff
+    );
+
+    border: 1px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        5px 7px 15px rgba(80,140,190,0.15),
+        -4px -4px 10px rgba(255,255,255,0.8),
+        inset 2px 2px 5px rgba(255,255,255,0.7);
+}
+
+.hasil strong {
+    color: #347db8;
+    font-size: 21px;
+}
+
+
+/* MEMPERTEBAL SEMUA FONT */
+body {
+    font-weight: 600;
+    color: #426d94;
+}
+
+/* JUDUL KALKULATOR */
+h1 {
+    font-weight: 800;
+    color: #326d9f;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-weight: 600;
+    color: #6389ad;
+}
+
+/* ANGKA INPUT */
+input,
+select {
+    font-weight: 700;
+    color: #426b91;
+}
+
+/* TOMBOL HITUNG */
+button {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* HASIL PERHITUNGAN */
+.hasil {
+    font-weight: 700;
+    color: #426f9b;
+}
+
+.hasil strong {
+    font-weight: 900;
+    color: #286da9;
+    font-size: 22px;
+}
+
+/* MEMPERJELAS KOTAK INPUT */
+input,
+select {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #e4f2ff
+    );
+
+    border: 2px solid #b5d9f7;
+    border-radius: 17px;
+
+    color: #315f86;
+    font-size: 17px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 12px rgba(65, 125, 180, 0.16),
+        inset 0 2px 5px rgba(255,255,255,0.95);
+
+    outline: none;
+}
+
+/* KOTAK SAAT DIKLIK */
+input:focus,
+select:focus {
+    border: 2px solid #70b5ed;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(100, 180, 240, 0.18),
+        0 6px 14px rgba(65, 125, 180, 0.2);
+}
+
+/* WARNA PLACEHOLDER */
+input::placeholder {
+    color: #829db5;
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* MEMPERJELAS PANEL HASIL */
+.hasil {
+    background: linear-gradient(
+        135deg,
+        #e5f3ff,
+        #cce5ff
+    );
+
+    border: 2px solid #afd3f3;
+
+    box-shadow:
+        0 6px 15px rgba(65, 125, 180, 0.17),
+        inset 0 2px 5px rgba(255,255,255,0.8);
+}
+
